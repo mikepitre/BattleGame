@@ -82,18 +82,6 @@
                                     <constraint firstAttribute="height" constant="55" id="UsB-z5-Zlt"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIK-YM-3rS">
-                                <rect key="frame" x="28" y="37" width="167" height="42"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="167" id="UDc-t6-GFp"/>
-                                    <constraint firstAttribute="height" constant="42" id="mOb-Lp-FDk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="25"/>
-                                <state key="normal" title="ATTACK">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUm-R7-U5C">
                                 <rect key="frame" x="405" y="42" width="167" height="42"/>
                                 <animations/>
@@ -106,6 +94,29 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIK-YM-3rS">
+                                <rect key="frame" x="28" y="37" width="167" height="42"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="UDc-t6-GFp"/>
+                                    <constraint firstAttribute="height" constant="42" id="mOb-Lp-FDk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="25"/>
+                                <state key="normal" title="ATTACK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let's Battle!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hie-Ip-F8Q">
+                                <rect key="frame" x="127" y="543" width="346" height="49"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Dcl-Ez-0GO"/>
+                                    <constraint firstAttribute="width" constant="346" id="qZv-PS-sHt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -115,9 +126,11 @@
                             <constraint firstItem="4kx-Qv-BCu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Fjn-Sd-22U"/>
                             <constraint firstItem="HrM-S8-6TW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kdx-aP-mGb"/>
                             <constraint firstItem="Cgo-hL-Xv9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="28" id="LT2-tq-UxJ"/>
+                            <constraint firstItem="hie-Ip-F8Q" firstAttribute="centerX" secondItem="Y6m-k1-RWQ" secondAttribute="centerX" id="NPC-e8-UIJ"/>
                             <constraint firstItem="Kd9-Qq-7Dv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S5d-xU-xHn"/>
                             <constraint firstItem="49d-XH-u47" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="48" id="SPa-6Q-6lg"/>
                             <constraint firstItem="Cgo-hL-Xv9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Soc-kI-fBd"/>
+                            <constraint firstItem="hie-Ip-F8Q" firstAttribute="centerY" secondItem="Y6m-k1-RWQ" secondAttribute="centerY" id="Tx8-FZ-pt1"/>
                             <constraint firstItem="pUm-R7-U5C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Urr-tI-sco"/>
                             <constraint firstItem="pUm-R7-U5C" firstAttribute="centerY" secondItem="4kx-Qv-BCu" secondAttribute="centerY" id="W9U-z5-5t9"/>
                             <constraint firstItem="BIK-YM-3rS" firstAttribute="centerY" secondItem="Cgo-hL-Xv9" secondAttribute="centerY" id="Xyi-Pi-g9F"/>
