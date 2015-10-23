@@ -39,7 +39,7 @@ class Character {
         }
     }
     
-    func attack(attackPower: Int) -> Int {
+    func gotAttacked(attackPower: Int) -> Int {
         self._hp -= attackPower
         return attackPower
     }

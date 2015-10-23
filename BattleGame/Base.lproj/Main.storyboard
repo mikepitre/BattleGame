@@ -94,7 +94,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="player2AttackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y1P-Vf-ZzO"/>
+                                    <action selector="player2AttackBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1vs-4E-w64"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIK-YM-3rS">
@@ -109,7 +109,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="player1AttackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNZ-c6-lEI"/>
+                                    <action selector="player1AttackBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tNQ-oB-KHL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Battle!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hie-Ip-F8Q">
@@ -161,7 +161,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="player1Btn" destination="BIK-YM-3rS" id="xba-gc-LUP"/>
                         <outlet property="player1Image" destination="49d-XH-u47" id="OfE-0k-aeV"/>
+                        <outlet property="player2Btn" destination="pUm-R7-U5C" id="opi-vS-R7v"/>
                         <outlet property="player2Image" destination="WSU-Qy-h5P" id="lpE-H5-Exg"/>
                         <outlet property="textLabel" destination="hie-Ip-F8Q" id="HJl-5i-Ert"/>
                     </connections>
