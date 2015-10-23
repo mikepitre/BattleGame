@@ -20,6 +20,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var player1Btn: UIButton!
     @IBOutlet weak var player2Btn: UIButton!
+    @IBOutlet weak var player1HpLabel: UILabel!
+    @IBOutlet weak var player2HpLabel: UILabel!
+    @IBOutlet weak var restartFrame: UIImageView!
+    @IBOutlet weak var restartBtn: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -36,40 +41,80 @@ class ViewController: UIViewController {
     }
     
     @IBAction func player1AttackBtnPressed(sender: AnyObject) {
+        //attack, disable & hide button for 3 secs
         player2.gotAttacked(player1.attackPower)
-        textLabel.text = "Player1 did \(player1.attackPower) damage to Player2"
-        player1Btn.enabled = false
-        player1Btn.hidden = true
-        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "enablePlayer1Btn", userInfo: nil, repeats: false)
+        textLabel.text = "\(player1.name) did \(player1.attackPower) damage to \(player2.name)"
+        player2HpLabel.text = "\(player2.hp) HP"
         
+        //check if player 2 is dead, if so disable attack btns, ask to restart
         if player2.isAlive == false {
             player2Image.hidden = true
-            textLabel.text = "Player1 Wins!"
+            textLabel.text = "\(player1.name) Wins!"
+            hideAllAttackButtons()
+            restartBtn.hidden = false
+            restartFrame.hidden = false
+        } else {
+            player1Btn.enabled = false
+            player1Btn.hidden = true
+            if player1.isAlive && player2.isAlive {
+            NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "enablePlayer1Btn", userInfo: nil, repeats: false)
+            }
         }
     }
     
     @IBAction func player2AttackBtnPressed(sender: AnyObject) {
+        //attack, disable & hide button for 3 secs
         player1.gotAttacked(player2.attackPower)
-        textLabel.text = "Player2 did \(player2.attackPower) damage to Player1"
-        player2Btn.enabled = false
-        player2Btn.hidden = true
-        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "enablePlayer2Btn", userInfo: nil, repeats: false)
+        textLabel.text = "\(player2.name) did \(player2.attackPower) damage to \(player1.name)"
+        player1HpLabel.text = "\(player1.hp) HP"
         
+        //check if player1 is dead, if so disable attack btns, ask to restart
         if player1.isAlive == false {
             player1Image.hidden = true
-            textLabel.text = "Player2 Wins!"
+            textLabel.text = "\(player2.name) Wins!"
+            hideAllAttackButtons()
+            restartBtn.hidden = false
+            restartFrame.hidden = false
+        } else {
+            player2Btn.enabled = false
+            player2Btn.hidden = true
+            NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "enablePlayer2Btn", userInfo: nil, repeats: false)
         }
     }
     
-    //enable button functions
+    @IBAction func restartBtnPressed(sender: AnyObject) {
+        player1 = Character(name: "Player 1")
+        player2 = Character(name: "Player 2")
+        player1Image.hidden = false
+        player2Image.hidden = false
+        player1HpLabel.text = "\(player1.hp) HP"
+        player2HpLabel.text = "\(player2.hp) HP"
+        restartFrame.hidden = true
+        restartBtn.hidden = true
+        enablePlayer1Btn()
+        enablePlayer2Btn()
+        textLabel.text = "Let's Battle!"
+    }
+    
     func enablePlayer1Btn() {
-        player1Btn.enabled = true
-        player1Btn.hidden = false
+        if player1.isAlive {
+            player1Btn.enabled = true
+            player1Btn.hidden = false
+        }
     }
     
     func enablePlayer2Btn() {
-        player2Btn.enabled = true
-        player2Btn.hidden = false
+        if player2.isAlive {
+            player2Btn.enabled = true
+            player2Btn.hidden = false
+        }
+    }
+    
+    func hideAllAttackButtons() {
+        player1Btn.hidden = true
+        player2Btn.hidden = true
+        player1Btn.enabled = false
+        player2Btn.enabled = false
     }
 
 
