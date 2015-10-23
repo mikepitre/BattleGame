@@ -93,6 +93,9 @@
                                 <state key="normal" title="ATTACK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="player2AttackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y1P-Vf-ZzO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIK-YM-3rS">
                                 <rect key="frame" x="28" y="37" width="167" height="42"/>
@@ -105,9 +108,12 @@
                                 <state key="normal" title="ATTACK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="player1AttackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNZ-c6-lEI"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let's Battle!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hie-Ip-F8Q">
-                                <rect key="frame" x="127" y="543" width="346" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Battle!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hie-Ip-F8Q">
+                                <rect key="frame" x="127" y="540.5" width="346" height="49"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="Dcl-Ez-0GO"/>
@@ -154,6 +160,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="player1Image" destination="49d-XH-u47" id="OfE-0k-aeV"/>
+                        <outlet property="player2Image" destination="WSU-Qy-h5P" id="lpE-H5-Exg"/>
+                        <outlet property="textLabel" destination="hie-Ip-F8Q" id="HJl-5i-Ert"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
