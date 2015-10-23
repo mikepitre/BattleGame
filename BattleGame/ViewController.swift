@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     @IBAction func player1AttackBtnPressed(sender: AnyObject) {
         //attack, disable & hide button for 3 secs
         player2.gotAttacked(player1.attackPower)
-        textLabel.text = "\(player1.name) did \(player1.attackPower) damage to \(player2.name)"
+        textLabel.text = "\(player1.name) did \(player1.attackPower) damage to \(player2.name)!"
         player2HpLabel.text = "\(player2.hp) HP"
         
         //check if player 2 is dead, if so disable attack btns, ask to restart
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     @IBAction func player2AttackBtnPressed(sender: AnyObject) {
         //attack, disable & hide button for 3 secs
         player1.gotAttacked(player2.attackPower)
-        textLabel.text = "\(player2.name) did \(player2.attackPower) damage to \(player1.name)"
+        textLabel.text = "\(player2.name) did \(player2.attackPower) damage to \(player1.name)!"
         player1HpLabel.text = "\(player1.hp) HP"
         
         //check if player1 is dead, if so disable attack btns, ask to restart
